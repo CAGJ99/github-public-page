@@ -1,0 +1,8 @@
+{
+    "/ws/*": {
+        "target": "https://farmanet.minsal.cl/index.php",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin":"true"
+    }
+}

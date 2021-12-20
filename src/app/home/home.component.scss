@@ -1,0 +1,50 @@
+.home {
+    .banner {
+        background-color: #05668c;
+        display: flex;
+        justify-content: space-between;
+        .banner-description {
+            display: flex;
+            padding: 3rem;
+            width: 40%;
+            .img {
+                img {
+                    padding: 1rem 1rem 0 0;
+                }
+            }
+            .text {
+                color: white;
+                font-weight: 500;
+                text-align: justify;
+            }
+        }
+    }
+    .subtitle {
+        padding: 1rem;
+        hr {
+            color: #0577a5;
+            padding: 0 1px;
+        }
+    }
+}
+
+@media (max-width: 993px) {
+    .banner {
+        .banner-description {
+            width: 100% !important;
+        }
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .subtitle {
+        text-align: center;
+    }
+}
+
+.alert {
+    margin: 2rem;
+}

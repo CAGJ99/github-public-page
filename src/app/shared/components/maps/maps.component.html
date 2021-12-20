@@ -1,0 +1,8 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="18">
+    <agm-marker [latitude]="lat" [longitude]="lng">
+        <agm-info-window>
+            <strong>{{pharmacy.local_nombre}}, {{pharmacy.local_direccion}}</strong>
+        </agm-info-window>
+
+    </agm-marker>
+</agm-map>
