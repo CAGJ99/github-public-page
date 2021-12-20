@@ -11,12 +11,12 @@ app.use(cors({
 }));
 
 // Serve static files
-app.use(express.static(__dirname + '/dist/pharmacyApp'));
+app.use(express.static(__dirname + '/dist/GithubApp'));
 
 // default Heroku port
 app.listen(process.env.PORT || 8080);
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/pharmacyApp/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/GithubApp/index.html'));
 });
