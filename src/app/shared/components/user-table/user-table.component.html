@@ -1,4 +1,4 @@
-<table class="styled-table table">
+<table class="styled-table">
     <thead>
         <tr>
             <th>{{config.header1}}</th>
@@ -10,7 +10,7 @@
             <td>
                 <app-user [data]="{id: item.id, name: item.login, pathImage: item.avatar_url}"></app-user>
             </td>
-            <td class="tdnumber">
+            <td [class]="config.button.classTd">
                 <button [class]="config.button.class" (click)="onShowModal(item.subscriptions_url)">
                     <i [class]="config.button.icon"></i>
                     {{config.button.tittle}}

@@ -16,7 +16,8 @@ export class MainFactoryService {
       button:{
         icon:'far fa-address-card',
         tittle:'Revisar perfil',
-        class:'btn btn-outline-warning'
+        class:'btn btn-outline-warning',
+        classTd:'tdtext'
       }
     },
     userTable:{
@@ -28,7 +29,8 @@ export class MainFactoryService {
       button:{
         icon:'fas fa-user-plus',
         tittle:'Más',
-        class:'btn btn-outline-secondary'
+        class:'btn btn-outline-secondary',
+        classTd:'tdbutton'
       }
     },
   }

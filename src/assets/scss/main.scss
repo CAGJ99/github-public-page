@@ -1,14 +1,4 @@
 .table {
-    // border-top: 5px solid #05668c;
-    thead {
-        tr>th {
-            // text-align: center;
-            // vertical-align: middle;
-            // border-top: none !important;
-            // border-bottom-color: #dddddd !important;
-            // border-bottom-width: 2px;
-        }
-    }
     tbody {
         tr>td {
             // vertical-align: middle;
@@ -49,7 +39,7 @@
     .table td {
         text-align: right !important;
         padding-left: 50%;
-        text-align: right !important;
+        text-align: center !important;
         position: relative;
     }
     .table td::before {

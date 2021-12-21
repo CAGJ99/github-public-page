@@ -19,7 +19,7 @@ export class UserTableComponent implements OnInit {
 
   @Output() onOpenModal: EventEmitter<any> = new EventEmitter();
   ngOnInit(): void {
-    console.log(this.listUsers);
+    console.log(this.config.button.classTd);
  
   }
 
