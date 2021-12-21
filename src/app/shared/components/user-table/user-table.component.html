@@ -1,8 +1,8 @@
-<table class="styled-table">
+<table class="styled-table table">
     <thead>
         <tr>
-            <th>Usuarios</th>
-            <th>subscripciones</th>
+            <th>{{config.header1}}</th>
+            <th>{{config.header2}}</th>
         </tr>
     </thead>
     <tbody>
@@ -10,10 +10,10 @@
             <td>
                 <app-user [data]="{id: item.id, name: item.login, pathImage: item.avatar_url}"></app-user>
             </td>
-            <td class="tdbutton">
-                <button class="btn btn-outline-secondary" (click)="onShowModal(item.subscriptions_url)">
-                    <i class="fas fa-user-plus"></i>
-                    Más
+            <td class="tdnumber">
+                <button [class]="config.button.class" (click)="onShowModal(item.subscriptions_url)">
+                    <i [class]="config.button.icon"></i>
+                    {{config.button.tittle}}
                 </button>
             </td>
         </tr>

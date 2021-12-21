@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Output, TemplateRef, EventEmitter } from '@an
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { IUserData } from '../../../core/interfaces/data-user.intefrace';
 import { IUser } from '../../../core/interfaces/user.interface';
+import { ITableConfig } from '../../../core/interfaces/table.interface';
 
 @Component({
   selector: 'app-user-table',
@@ -10,11 +11,15 @@ import { IUser } from '../../../core/interfaces/user.interface';
 })
 export class UserTableComponent implements OnInit {
    user!:IUser
+
+
+  @Input() config!:ITableConfig;
   @Input() listUsers!:IUserData[];
   constructor() {}
 
   @Output() onOpenModal: EventEmitter<any> = new EventEmitter();
   ngOnInit(): void {
+    console.log(this.listUsers);
  
   }
 

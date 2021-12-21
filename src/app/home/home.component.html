@@ -18,13 +18,14 @@
         <h4><i class="fab fa-github-alt"></i> Usuarios</h4>
         <hr>
 
-        <app-user-table [listUsers]="listUsers" (onOpenModal)="onHandleOpenModal($event, modalSub)"></app-user-table>
+        <app-user-table [listUsers]="listUsers" [config]="userTableConfig" (onOpenModal)="onHandleGetSubscription($event, modalSub)"></app-user-table>
     </div>
 
 
 
     <ng-template #modalSub>
         <app-modal icon="fas fa-user-plus" [title]="'Subscripciones'" [actionDefault]="'Cerrar'" [nivel]="1">
-            <app-subscription-table></app-subscription-table>
+            <app-user-table [listUsers]="subscriptionList" [config]="subscritpionTableConfig"></app-user-table>
+            <!-- <app-subscription-table ></app-subscription-table> -->
         </app-modal>
     </ng-template>
