@@ -2,35 +2,21 @@
     <div class="banner">
         <div class="banner-description">
             <div class="img">
-                <img src="assets/img/balanza.png" alt="medicine" width="100" height="auto">
+                <img src="assets/img/planet.png" alt="medicine" width="100" height="auto">
             </div>
             <div class="text">
-                <h3>Bienvenido a la Plataforma Ley del Lobby</h3>
+                <h3>Where the world builds software</h3>
                 <p>
-                    Esta plataforma permite gestionar audiencias, viajes y donativos de acuerdo a lo establecido en la Ley Nº 20.730 y su reglamento.
+                    Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.
                 </p>
             </div>
         </div>
-        <img src="assets/img/maleta.png" alt="farmacia" width="500" height="auto">
+        <img src="assets/img/gitlogo.png" alt="farmacia" width="500" height="auto">
     </div>
     <div class="subtitle">
 
-        <h4><i class="fas fa-gavel"></i> Servicios</h4>
+        <h4><i class="fab fa-github-alt"></i> Usuarios</h4>
         <hr>
-    </div>
 
-    <div class="tabs">
-        <tabset>
-            <tab [active]="true" class="flex-auto" heading="Cargos activos" id="tab1">
-                <div class="alert alert-warning" role="alert">
-                    <i class="fas fa-exclamation-triangle"></i> No hay registros de cargos activos
-                </div>
-            </tab>
-            <tab [active]="false" class="flex-auto" heading="Cargos pasivos" id="tab2">
-                <div class="alert alert-warning" role="alert">
-                    <i class="fas fa-exclamation-triangle"></i> No hay registros de cargos pasivos
-                </div>
-            </tab>
-        </tabset>
+        <app-user-table [listUsers]="listUsers"></app-user-table>
     </div>
-</div>

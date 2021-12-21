@@ -1,0 +1,6 @@
+<div class="user">
+    <ngx-skeleton-loader *ngIf="activeLoading" appearance="circle" count="1" animation="progress-dark" [theme]="{'width': '30px', 'height': '30px', 'margin': '0'}">
+    </ngx-skeleton-loader>
+    <img [src]="data.pathImage | defaultImage: 'user'" [alt]="data.name" [title]="data.name" loading="lazy" error-src-img type="user" (load)="onLoadImg()">
+    <p class="name"> {{data.name}}</p>
+</div>

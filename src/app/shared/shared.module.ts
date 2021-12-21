@@ -6,7 +6,11 @@ import { AgmCoreModule } from '@agm/core';
 import { ModalComponent } from './components/modal/modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {PaginationModule } from 'ngx-bootstrap/pagination';
-import { TabsModule } from 'ngx-bootstrap/tabs'
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { UserTableComponent } from './components/user-table/user-table.component';
+import { UserComponent } from './components/user/user.component'
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -15,7 +19,9 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
   declarations: [
     NavbarComponent,
     MapsComponent,
-    ModalComponent
+    ModalComponent,
+    UserTableComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,
@@ -24,14 +30,18 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
     }),
     PaginationModule.forRoot(),
     ModalModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    NgxSkeletonLoaderModule,
+    CoreModule
 
   ], exports: [
     NavbarComponent,
     ModalComponent,
     MapsComponent,
     PaginationModule,
-    TabsModule
+    TabsModule,
+    UserTableComponent,
+    NgxSkeletonLoaderModule
   ]
 })
 export class SharedModule { }

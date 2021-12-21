@@ -1,0 +1,16 @@
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Users</th>
+            <th>Subscriptions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listUsers">
+            <td>
+                <app-user [data]="{id: item.id, name: item.login, pathImage: item.avatar_url}"></app-user>
+            </td>
+            <td>asd</td>
+        </tr>
+    </tbody>
+</table>

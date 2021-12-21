@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LawLobbyService } from '../services/law-lobby.service';
+import { GithubQuerysService } from '../services/github-querys.service';
+import { IUserData } from '../core/interfaces/data-user.intefrace';
 
 @Component({
   selector: 'app-home',
@@ -7,16 +8,18 @@ import { LawLobbyService } from '../services/law-lobby.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private lawLobbyService: LawLobbyService) { }
+  listUsers:IUserData[];
+  constructor(private gitHubQueryService: GithubQuerysService) {
+    this.listUsers =[]
+   }
 
   ngOnInit(): void {
-    this.getAll();
+    this.getUsers();
   }
 
-  private getAll(){
-    this.lawLobbyService.getAll().subscribe(response=>{
-      console.log(response);
-    })
+  private getUsers() {
+    this.gitHubQueryService.getUsers().subscribe((response:any) => {
+     this.listUsers = response;
+    });
   }
 }

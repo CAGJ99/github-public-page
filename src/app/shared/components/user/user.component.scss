@@ -1,0 +1,17 @@
+.user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    ngx-skeleton-loader {
+        position: absolute;
+    }
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .name {
+        margin: 0 0 0 0.5rem;
+        font-weight: bold;
+    }
+}
