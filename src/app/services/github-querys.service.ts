@@ -12,4 +12,8 @@ export class GithubQuerysService {
   public getUsers(){
     return this.http.get(`${environment.apiUrl}users`);
   }
+
+  public getSubscription(url:string){
+    return this.http.get(url);
+  }
 }

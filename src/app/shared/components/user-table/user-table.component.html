@@ -1,8 +1,8 @@
 <table class="styled-table">
     <thead>
         <tr>
-            <th>Users</th>
-            <th>Subscriptions</th>
+            <th>Usuarios</th>
+            <th>subscripciones</th>
         </tr>
     </thead>
     <tbody>
@@ -10,7 +10,12 @@
             <td>
                 <app-user [data]="{id: item.id, name: item.login, pathImage: item.avatar_url}"></app-user>
             </td>
-            <td>asd</td>
+            <td class="tdbutton">
+                <button class="btn btn-outline-secondary" (click)="onShowModal(item.subscriptions_url)">
+                    <i class="fas fa-user-plus"></i>
+                    Más
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -11,6 +11,7 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import { UserComponent } from './components/user/user.component'
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { CoreModule } from '../core/core.module';
+import { SubscriptionTableComponent } from './components/subscription-table/subscription-table.component';
 
 
 
@@ -21,7 +22,8 @@ import { CoreModule } from '../core/core.module';
     MapsComponent,
     ModalComponent,
     UserTableComponent,
-    UserComponent
+    UserComponent,
+    SubscriptionTableComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { CoreModule } from '../core/core.module';
     PaginationModule,
     TabsModule,
     UserTableComponent,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    SubscriptionTableComponent
   ]
 })
 export class SharedModule { }
